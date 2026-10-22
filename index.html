@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio & Bienvenida | @anfeles85</title>
+  <!-- Tailwind CSS CDN para estilos rápidos y responsivos sin instalación previa -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fuente Google Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            surface: {
+              900: '#0b0f19',
+              800: '#111827',
+              700: '#1f2937',
+              600: '#374151'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos decorativos sutiles para fondos y brillos */
+    .glow-bg {
+      background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
+    }
+    .card-glass {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .card-glass:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-surface-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white glow-bg">
+
+  <!-- Encabezado y Navegación -->
+  <header class="sticky top-0 z-50 card-glass border-b border-white/5 transition duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 p-0.5 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition">
+          <div class="w-full h-full bg-surface-900 rounded-[10px] flex items-center justify-center font-mono font-bold text-brand-400">
+            &lt;/&gt;
+          </div>
+        </div>
+        <span class="font-bold text-lg tracking-tight text-white group-hover:text-brand-400 transition">
+          anfeles85
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#proyectos" class="hover:text-brand-400 transition">Proyectos</a>
+        <a href="#habilidades" class="hover:text-brand-400 transition">Habilidades</a>
+        <a href="#acerca" class="hover:text-brand-400 transition">Sobre Mí</a>
+        <a href="#contacto" class="hover:text-brand-400 transition">Contacto</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <a href="https://github.com/anfeles85" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-200 text-sm font-medium border border-white/10 hover:border-brand-500/40 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span class="hidden sm:inline">Perfil GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero / Presentación Principal -->
+    <section id="inicio" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs sm:text-sm font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Repositorio Abierto • Desarrollador & Creador
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+        Hola, soy <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-sky-400 bg-clip-text text-transparent">@anfeles85</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 mb-10 leading-relaxed font-light">
+        Bienvenido a mi espacio de código abierto. Aquí recopilo proyectos de software, experimentos de desarrollo, automatizaciones y soluciones tecnológicas diseñadas con pasión por la simplicidad y el rendimiento.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#proyectos" class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 transition duration-200">
+          Explorar Proyectos
+        </a>
+        <a href="#contacto" class="px-6 py-3.5 rounded-xl bg-surface-800 hover:bg-surface-700 text-slate-200 font-semibold text-sm border border-white/10 transition duration-200">
+          Ponerse en Contacto
+        </a>
+      </div>
+
+      <!-- Métricas / Estadísticas rápidas -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+        <div class="card-glass p-5 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold text-white" id="stat-repos">...</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Repositorios</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold text-white" id="stat-followers">...</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Seguidores</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold text-emerald-400">100%</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Código Abierto</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl text-center">
+          <div class="text-3xl font-extrabold text-brand-400">2026</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Actualizado</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Habilidades / Stack Tecnológico -->
+    <section id="habilidades" class="py-16 bg-surface-800/40 border-y border-white/5">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Habilidades & Tecnologías</h2>
+          <p class="text-slate-400 text-sm mt-2">Herramientas y lenguajes utilizados en mis repositorios</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">⚡</span>
+            <span class="text-sm font-semibold text-slate-200">JavaScript</span>
+            <span class="text-xs text-slate-400">Web & Node</span>
+          </div>
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">🐍</span>
+            <span class="text-sm font-semibold text-slate-200">Python</span>
+            <span class="text-xs text-slate-400">Scripts & Data</span>
+          </div>
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">🎨</span>
+            <span class="text-sm font-semibold text-slate-200">HTML5 & CSS3</span>
+            <span class="text-xs text-slate-400">UI / Frontend</span>
+          </div>
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">🗄️</span>
+            <span class="text-sm font-semibold text-slate-200">Bases de Datos</span>
+            <span class="text-xs text-slate-400">SQL & NoSQL</span>
+          </div>
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">🐙</span>
+            <span class="text-sm font-semibold text-slate-200">Git & GitHub</span>
+            <span class="text-xs text-slate-400">Control de Versiones</span>
+          </div>
+          <div class="card-glass p-4 rounded-xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 transition">
+            <span class="text-2xl">🚀</span>
+            <span class="text-sm font-semibold text-slate-200">Despliegue</span>
+            <span class="text-xs text-slate-400">CI/CD & Cloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <h2 class="text-3xl font-bold text-white tracking-tight">Proyectos Destacados</h2>
+          <p class="text-slate-400 text-sm mt-1">Explora las soluciones, repositorios y demos públicas</p>
+        </div>
+
+        <!-- Filtros rápidos -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium" id="filter-container">
+          <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition">Todos</button>
+          <button onclick="filterProjects('web')" class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-300 transition">Web</button>
+          <button onclick="filterProjects('backend')" class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-300 transition">Backend/Data</button>
+          <button onclick="filterProjects('tools')" class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-300 transition">Herramientas</button>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Proyectos -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Tarjeta de Proyecto 1 -->
+        <div class="project-card card-glass rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-category="web">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Frontend</span>
+              <a href="https://github.com/anfeles85" target="_blank" class="text-slate-400 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Web Portfolio & Showcase</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Página de bienvenida moderna, ligera y responsiva para mostrar código y repositorios de manera rápida.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+              <span class="bg-surface-800 px-2 py-0.5 rounded">HTML5</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">Tailwind</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Proyecto 2 -->
+        <div class="project-card card-glass rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-category="backend">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Backend</span>
+              <a href="https://github.com/anfeles85" target="_blank" class="text-slate-400 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">API & Servicios REST</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Módulos y servicios de integración para consumo y transformación de datos eficientes y seguros.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+              <span class="bg-surface-800 px-2 py-0.5 rounded">Python / Node</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">REST API</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">JSON</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Proyecto 3 -->
+        <div class="project-card card-glass rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1" data-category="tools">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Automatización</span>
+              <a href="https://github.com/anfeles85" target="_blank" class="text-slate-400 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Scripts & Automatización</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Colección de utilidades y flujos programados para optimizar tareas repetitivas y procesamiento de archivos.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+              <span class="bg-surface-800 px-2 py-0.5 rounded">Bash / CLI</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">Pipelines</span>
+              <span class="bg-surface-800 px-2 py-0.5 rounded">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repositorios cargados dinámicamente desde GitHub -->
+      <div class="mt-14 pt-10 border-t border-white/5">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <h3 class="text-lg font-bold text-white">Actividad en GitHub (@anfeles85)</h3>
+          </div>
+          <span class="text-xs text-slate-400">Sincronizado vía GitHub API</span>
+        </div>
+        <div id="github-repos-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl card-glass text-center text-slate-400 text-sm">
+            Cargando repositorios en tiempo real...
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Sobre Mí y Contacto -->
+    <section id="acerca" class="py-16 bg-surface-800/20 border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">Sobre el Perfil</h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+          Este repositorio sirve como portal central para mis contribuciones técnicas, código de prueba y desarrollos en producción. Si deseas colaborar en un proyecto, revisar el código o intercambiar ideas, no dudes en conectar a través de GitHub o escribirme directamente.
+        </p>
+
+        <!-- Métodos de Contacto -->
+        <div id="contacto" class="flex flex-wrap justify-center gap-4">
+          <a href="https://github.com/anfeles85" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-800 hover:bg-surface-700 border border-white/10 text-white font-medium text-sm transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            Seguir en GitHub
+          </a>
+
+          <button onclick="copiarPerfil()" id="btn-copy"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span id="copy-text">Copiar Enlace al Perfil</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>© 2026 anfeles85. Diseñado con HTML & Tailwind CSS puro — Listo para GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Lógica en JavaScript Puro (Sin Frameworks) -->
+  <script>
+    const GITHUB_USERNAME = 'anfeles85';
+
+    // Función para filtrar tarjetas de proyectos
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Actualizar estilo visual de los botones
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white');
+        btn.classList.add('bg-surface-800', 'text-slate-300');
+      });
+
+      const activeBtn = event.currentTarget;
+      if (activeBtn) {
+        activeBtn.classList.add('bg-brand-600', 'text-white');
+        activeBtn.classList.remove('bg-surface-800', 'text-slate-300');
+      }
+
+      // Filtrar elementos
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Función para copiar enlace al portapapeles de manera compatible
+    function copiarPerfil() {
+      const enlace = 'https://github.com/' + GITHUB_USERNAME;
+      const inputTemp = document.createElement('input');
+      inputTemp.value = enlace;
+      document.body.appendChild(inputTemp);
+      inputTemp.select();
+      document.execCommand('copy');
+      document.body.removeChild(inputTemp);
+
+      const copyText = document.getElementById('copy-text');
+      const originalText = copyText.innerText;
+      copyText.innerText = '¡Copiado con éxito!';
+      setTimeout(() => {
+        copyText.innerText = originalText;
+      }, 2500);
+    }
+
+    // Consulta en vivo a la API de GitHub para traer repositorios públicos
+    async function loadGitHubData() {
+      try {
+        // Cargar datos de usuario
+        const userRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        if (userRes.ok) {
+          const userData = await userRes.json();
+          document.getElementById('stat-repos').innerText = userData.public_repos ?? '0';
+          document.getElementById('stat-followers').innerText = userData.followers ?? '0';
+        } else {
+          document.getElementById('stat-repos').innerText = '10+';
+          document.getElementById('stat-followers').innerText = '5+';
+        }
+
+        // Cargar repositorios más recientes
+        const reposRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=4`);
+        const reposContainer = document.getElementById('github-repos-container');
+
+        if (reposRes.ok) {
+          const repos = await reposRes.json();
+          if (repos.length === 0) {
+            reposContainer.innerHTML = `
+              <div class="col-span-full p-4 rounded-xl card-glass text-center text-slate-400 text-sm">
+                No hay repositorios públicos adicionales encontrados aún. Visita directamente el <a href="https://github.com/${GITHUB_USERNAME}" class="text-brand-400 underline">perfil en GitHub</a>.
+              </div>`;
+            return;
+          }
+
+          reposContainer.innerHTML = repos.map(repo => `
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-xl card-glass hover:border-brand-500/50 transition group flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-bold text-white group-hover:text-brand-400 transition text-sm truncate max-w-[200px]">
+                    ${repo.name}
+                  </span>
+                  <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
+                    ⭐ ${repo.stargazers_count}
+                  </span>
+                </div>
+                <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+                  ${repo.description ? repo.description : 'Repositorio en desarrollo en GitHub.'}
+                </p>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                <span>${repo.language ? repo.language : 'Código'}</span>
+                <span>Actualizado: ${new Date(repo.updated_at).toLocaleDateString()}</span>
+              </div>
+            </a>
+          `).join('');
+        } else {
+          reposContainer.innerHTML = `
+            <div class="col-span-full p-4 rounded-xl card-glass text-center text-slate-400 text-sm">
+              Visita todos los proyectos directamente en <a href="https://github.com/${GITHUB_USERNAME}" class="text-brand-400 underline" target="_blank">github.com/${GITHUB_USERNAME}</a>.
+            </div>`;
+        }
+      } catch (err) {
+        document.getElementById('stat-repos').innerText = '10+';
+        document.getElementById('stat-followers').innerText = '0+';
+        document.getElementById('github-repos-container').innerHTML = `
+          <div class="col-span-full p-4 rounded-xl card-glass text-center text-slate-400 text-sm">
+            Visita los proyectos activos en <a href="https://github.com/${GITHUB_USERNAME}" class="text-brand-400 underline" target="_blank">github.com/${GITHUB_USERNAME}</a>.
+          </div>`;
+      }
+    }
+
+    // Inicializar carga de datos al cargar el DOM
+    window.addEventListener('DOMContentLoaded', loadGitHubData);
+  </script>
+</body>
+</html>
